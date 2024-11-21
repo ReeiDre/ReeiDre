@@ -1,0 +1,139 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Estilos para el header */
+header {
+    height: 55px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Ícono de menú */
+.icon-menu {
+    font-family: 'Fontello'; /* Aseguramos que se utilice la fuente de Fontello */
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Menú desplegable */
+#menu-bar {
+    display: none; /* Ocultamos el checkbox */
+}
+
+.menu {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.9);
+    transition: transform 0.5s ease;
+    transform: translateX(-100%); /* El menú empieza oculto */
+    z-index: 50;
+}
+
+/* Enlaces del menú */
+.menu a {
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Activar el menú cuando el checkbox esté marcado */
+#menu-bar:checked ~ .menu {
+    transform: translateX(0); /* El menú se mueve a la derecha */
+}
+
+.cuerpo {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1em;
+    margin-top: 20px;
+}
+
+/* Contenedor de la imagen y la descripción */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px; /* Deja espacio para el header fijo */
+}
+
+a {
+    display: block;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.header-image:hover {
+    transform: scale(1.05);
+}
+
+/* Descripción debajo de la imagen */
+.image-description {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(236, 236, 236);
+    width: 80%; /* Ancho para no ocupar todo el espacio */
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #000000;
+}
+
+
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 2em; /* Aumenta el espacio dentro del footer */
+    margin-top: 20px;
+    font-size: 1.5em; /* Aumenta el tamaño del texto */
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 2em; /* Tamaño de los iconos */
+    margin: 0 15px;
+    color: white; /* Color de los iconos */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #23bba9; /* Cambia el color de los iconos al pasar el ratón */
+}
+
+
+
